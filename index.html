@@ -5,19 +5,22 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Welcome</title>
+        <title>Login - Messaging Portal</title>
         <link rel="stylesheet" href="styles.css">
     </head>
 
     <body>
-        <div class="home-container">
-            <h2>Welcome to the Messaging Portal</h2>
-            <p><a href="login.html">Login</a></p>
-            <p><a href="register.html">Register</a></p>
+        <div class="login-container">
+            <h2>Login</h2>
+            <input type="text" id="login-id" placeholder="Enter your unique ID" required />
+            <button onclick="loginUser()">Login</button>
+            <p>Don't have an account? <a href="register.html">Register here</a></p>
         </div>
 
         <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
         <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js"></script>
+        <script src="firebase-config.js"></script>
         <script src="script.js"></script>
     </body>
 

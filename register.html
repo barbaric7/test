@@ -5,24 +5,24 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Register</title>
+        <title>Register - Messaging Portal</title>
         <link rel="stylesheet" href="styles.css">
     </head>
 
     <body>
-        <div class="form-container">
+        <div class="register-container">
             <h2>Register</h2>
-            <input type="text" id="username" placeholder="Enter a username">
+            <input type="text" id="username" placeholder="Enter your username" required />
             <button onclick="registerUser()">Register</button>
-            <p>Already have an account? <a href="login.html">Login here</a></p>
-            <div id="unique-id-container" style="display:none;">
-                <h3>Your unique ID: <span id="unique-id"></span></h3>
-                <button onclick="copyToClipboard()">Copy ID</button>
-            </div>
+            <div id="unique-id-container"></div>
+            <button id="copy-button" style="display: none;" onclick="copyUniqueId()">Copy Unique ID</button>
+            <p>Already have an account? <a href="index.html">Login here</a></p>
         </div>
 
         <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
         <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js"></script>
+        <script src="firebase-config.js"></script>
         <script src="script.js"></script>
     </body>
 

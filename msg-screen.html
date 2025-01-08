@@ -5,22 +5,28 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Message Screen</title>
+        <title>Messages - Messaging Portal</title>
         <link rel="stylesheet" href="styles.css">
     </head>
 
     <body>
-        <div class="msg-container">
-            <h2>Chat with Your Friend</h2>
-            <input type="text" id="friend-id" placeholder="Enter friend's unique ID" />
-            <textarea id="message-input" placeholder="Type your message..."></textarea>
-            <button onclick="sendMessage()">Send Message</button>
+        <div class="message-container">
+            <h2>Messages</h2>
+            <input type="text" id="receiver-id" placeholder="Enter receiver's unique ID" />
+            <button onclick="startListening()">Start Listening</button>
 
-            <div id="messages"></div>
+            <div id="messages-container"></div>
+
+            <input type="text" id="message-input" placeholder="Type a message" />
+            <button onclick="sendMessage()">Send</button>
+
+            <button onclick="logoutUser()">Logout</button>
         </div>
 
         <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js"></script>
         <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js"></script>
+        <script src="firebase-config.js"></script>
         <script src="script.js"></script>
     </body>
 
