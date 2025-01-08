@@ -1,0 +1,27 @@
+<!-- msg-screen.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Message Screen</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+
+    <body>
+        <div class="msg-container">
+            <h2>Chat with Your Friend</h2>
+            <input type="text" id="friend-id" placeholder="Enter friend's unique ID" />
+            <textarea id="message-input" placeholder="Type your message..."></textarea>
+            <button onclick="sendMessage()">Send Message</button>
+
+            <div id="messages"></div>
+        </div>
+
+        <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js"></script>
+        <script src="script.js"></script>
+    </body>
+
+</html>
